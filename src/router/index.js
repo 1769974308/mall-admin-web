@@ -358,6 +358,46 @@ export const asyncRouterMap = [
       }
     ]
   },
+  {
+    path:'/demo',
+    component: Layout,
+    redirect: '/demo/layout',
+    name: 'demo',
+    meta: {title: 'Demo', icon: 'ums'},
+    children:[
+      {
+        path: 'layout',
+        name: 'layout',
+        component: () => import('@/views/demo/layout/index'),
+        meta: {title: 'layout布局', icon: 'ums-admin'}
+      },
+      {
+        path: 'container',
+        name: 'container',
+        component: () => import('@/views/demo/container/index'),
+        meta: {title: 'container布局容器', icon: 'ums-admin'}
+      },
+      {
+        path: 'button',
+        name: 'button',
+        component: () => import('@/views/demo/button/index'),
+        meta: {title: 'button按钮', icon: 'ums-admin'}
+      },
+      {
+        path: 'form',
+        name: 'form',
+        component: () => import('@/views/demo/form/index'),
+        meta: {title: 'form表单', icon: 'ums-admin'}
+      }
+      ,
+      {
+        path: 'table',
+        name: 'table',
+        component: () => import('@/views/demo/table/index'),
+        meta: {title: 'table表格', icon: 'ums-admin'}
+      }
+    ]
+  },
   {path: '*', redirect: '/404', hidden: true}
 ]
 
