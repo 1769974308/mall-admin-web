@@ -388,13 +388,18 @@ export const asyncRouterMap = [
         name: 'form',
         component: () => import('@/views/demo/form/index'),
         meta: {title: 'form表单', icon: 'ums-admin'}
-      }
-      ,
+      },
       {
         path: 'table',
         name: 'table',
         component: () => import('@/views/demo/table/index'),
         meta: {title: 'table表格', icon: 'ums-admin'}
+      },
+      {
+        path: 'api',
+        name: 'api',
+        component: () => import('@/views/demo/api/index'),
+        meta: {title: '联调API', icon: 'ums-admin'}
       }
     ]
   },
